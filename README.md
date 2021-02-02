@@ -2,6 +2,7 @@
 A simple translation asset for Unity, made with clean C# 8.0 code
 # Requirements
 - .NET 4.x
+- Newtonsoft.Json (https://www.newtonsoft.com/json)
 - TextMeshPRO
 - Basic JSON knowledge
 # Steps to enable
