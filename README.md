@@ -5,7 +5,7 @@ A simple translation asset for Unity, made with clean C# 8.0 code
 - Newtonsoft.Json (https://www.newtonsoft.com/json)
 - TextMeshPRO
 - Basic JSON knowledge
-# Steps to enable
+# Setup
 1. Attach `CLocalization` to an emtpy `GameObject` that is always active
 2. Configure the script to your liking with identifiers
 3. Create a new `.txt` file with JSON-format such as:
