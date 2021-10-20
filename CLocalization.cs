@@ -45,7 +45,7 @@ namespace Localization
         {
             instance = this;
             var translations = config.translations;
-            for (ushort i = 0; i < translations.Length; i++)
+            for (var i = 0; i < translations.Length; i++)
             {
                 var translation = translations[i];
                 if (translation.translation) continue;
@@ -62,7 +62,7 @@ namespace Localization
         {
             var translations = config.translations;
             var result = new GTranslation();
-            for (ushort i = 0; i < translations.Length; i++)
+            for (var i = 0; i < translations.Length; i++)
             {
                 var translation = translations[i];
                 if (!string.Equals(translation.identifier, identifier,
@@ -86,11 +86,6 @@ namespace Localization
         /// </summary>
         /// <param name="key">The translation key.</param>
         /// <returns>The translated content.</returns>
-        internal static string GetTranslation(string key)
-        {
-            var ins = instance;
-            var jOBJ = JObject.Parse(ins.ReadFull(ins.config.currentTranslation.identifier));
-            return (jOBJ[key] ?? key).ToString();
-        }
+        internal static string GetTranslation(string key) => return (JObject.Parse(instance.ReadFull(instance.config.currentTranslation.identifier))[key] ?? key).ToString();
     }
 }
